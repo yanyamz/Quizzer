@@ -13,56 +13,35 @@ main {
 }
 
 .about__header {
-    text-align: center;
-    margin-bottom: 30px;
+    margin: 10px;
     color: black;
 }
 
 .about__article {
+    width: 100%;
     display: inline-block;
     text-align: left;
     margin: 10px 0px;
     border: 5px solid black;
     border-left: none;
     background: rgba(255, 0, 0, 0.5);
-    padding: 30px;
-    padding-right: 580px;
+    padding: 20px;
     transition: all 0.6s ease; /**changes color slowly and smoothly upon hover**/
-}
-
-.about-purpose {
-    text-align: right;
-    /* takes it out of document flow and lets other elements wrap around it */
-    /* neeeds clearfix below to account for the wrapping */
-    float: right;
-    border: 5px solid black;
-    border-right: none;
-    padding: 30px;
-    padding-left: 580px;
+    /* Just a little animation on page load, you can delete if you want. */
+    animation: grow 0.4s ease-out 500ms 1 normal forwards;
 }
 
 .about__article:hover {
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 20px 580px;
+    text-align: center;
     transition: all 0.6s ease; /**changes color slowly and smoothly upon hover**/
 }
 
-.about-purpose:hover {
-    background: rgba(0, 0, 0, 0.8);
+.about__links a {
+    text-decoration: none;
     color: white;
-    padding-right: 580px;
-    transition: all 0.6s ease;
-}
-
-.about__article h1,
-.about__article p,
-.about__article ul {
-    display: inline-block;
-}
-
-span {
-    display: block;
+    font-weight: bold;
 }
 
 /* needed to position the floated item (about-purporse) to the right*/
@@ -70,14 +49,35 @@ span {
     clear: both;
 }
 
-.about-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
 .footer {
     /*needed to stick footer to bottom */
     /* src: https://css-tricks.com/couple-takes-sticky-footer/#there-is-negative-top-margins-on-footers */
     margin-top: -1px;
+}
+
+/* Small screen breakpoint once it hits anything larger than this, these styles will be applied*/
+@media (min-width: 640px) {
+    .about__article {
+        width: 80%;
+        max-width: 1200px;
+    }
+    .about__purpose {
+        text-align: right;
+        float: right;
+        border-right: none;
+        border-left: solid black 5px;
+    }
+}
+
+/* Animations */
+@keyframes grow {
+    0% {
+        transform: scaleX(0.4);
+        transform-origin: 0% 0%;
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: 0% 0%;
+    }
 }
