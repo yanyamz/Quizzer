@@ -3,12 +3,13 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   /* By default, body contains some margin
   ..get rid of this to allow elements to 
   span the page in its entirety */
   margin: 0; 
   font-family: 'Kaisei HarunoUmi', serif;
+  height: 100%; /*Allows the page to span entire vertical space*/
 }
 
 .main-header {
