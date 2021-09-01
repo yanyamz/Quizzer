@@ -23,34 +23,40 @@
           <a href="#">About</a>
         </li>
         <li class="main-nav__item">
-          <a href="#">About us</a>
+          <a href="#">Quiz</a>
         </li>
       </ul>
     </nav>
   </header>
   <main>
-   <section class="main">
-     <article>
-      <h1>Who are we</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Purus in massa tempor nec feugiat nisl pretium fusce. 
-                Nec feugiat nisl pretium fusce id velit.</p> 
-     </article>
-     <article>
-      <h1>Purpose</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Purus in massa tempor nec feugiat nisl pretium fusce. 
-                Nec feugiat nisl pretium fusce id velit.</p>
-     </article>
-     <article>
-      <h1>Project Links</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Purus in massa tempor nec feugiat nisl pretium fusce. 
-                Nec feugiat nisl pretium fusce id velit.</p>
-     </article>
+   <section class="about">
+     <h1 id="about__header">About Us</h1>
+     <section class="about__articles">
+      <article class="about__article" id="about-team">
+        <h1>Who are we</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Purus in massa tempor nec feugiat nisl pretium fusce. 
+                  Nec feugiat nisl pretium fusce id velit.</p> 
+       </article>
+       <article class="about__article" id="about-purpose">
+        <h1>Purpose</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Purus in massa tempor nec feugiat nisl pretium fusce. 
+                  Nec feugiat nisl pretium fusce id velit.</p>
+       </article>
+       <!-- for float -->
+       <!-- placement is important, otherwise doesn't work as intended -->
+       <div class="clearfix"></div>
+       <article class="about__article" id="about-links">
+        <h1>Project Links</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Purus in massa tempor nec feugiat nisl pretium fusce. 
+                  Nec feugiat nisl pretium fusce id velit.</p>
+       </article>
+     </section>
    </section>
   </main>
   <footer id="main-footer">
