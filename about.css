@@ -15,27 +15,61 @@ main {
 .about__header {
     margin: 10px;
     color: black;
+    text-align: center;
 }
 
 .about__article {
-    width: 100%;
-    display: inline-block;
+    width: 50%;
+    display: block;
     text-align: left;
     margin: 10px 0px;
     border: 5px solid black;
     border-left: none;
     background: rgba(255, 0, 0, 0.5);
     padding: 20px;
-    transition: all 0.6s ease; /**changes color slowly and smoothly upon hover**/
+    transition: all 1s ease; /**changes color slowly and smoothly upon hover**/
     /* Just a little animation on page load, you can delete if you want. */
     animation: grow 0.4s ease-out 500ms 1 normal forwards;
+}
+
+.about__article ul {
+    list-style-type: none;
+}
+
+.about__article p {
+    display: block;
+}
+
+/* Styles member names */
+.about__team p {
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Brings it close to member name */
+.about__team ul {
+    margin-top: 0px;
 }
 
 .about__article:hover {
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    text-align: center;
-    transition: all 0.6s ease; /**changes color slowly and smoothly upon hover**/
+    text-align: right;
+    width: 100%;
+    transition: all 1s ease; /**changes color slowly and smoothly upon hover**/
+}
+
+.about__purpose {
+    text-align: right;
+    float: right;
+    border-right: none;
+    border-left: solid black 5px;
+    transition: all 1s ease; /**changes color slowly and smoothly upon hover**/
+}
+
+.about__purpose:hover {
+    text-align: left;
 }
 
 .about__links a {
@@ -58,7 +92,7 @@ main {
 /* Small screen breakpoint once it hits anything larger than this, these styles will be applied*/
 @media (min-width: 640px) {
     .about__article {
-        width: 80%;
+        width: 30%;
         max-width: 1200px;
     }
     .about__purpose {
@@ -66,6 +100,8 @@ main {
         float: right;
         border-right: none;
         border-left: solid black 5px;
+        transition: all 1s ease; /**changes color slowly and smoothly upon hover**/
+
     }
 }
 
