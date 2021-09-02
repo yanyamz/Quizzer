@@ -16,7 +16,12 @@ html, body {
   width: 100%;
   padding: 15px;
   border-bottom: 5px solid black;
-
+  position: fixed;
+  /* A hack to get navbar to be at top above the item below*/
+  /*93px is the exact height of the navbar*/
+  margin-top: -93px;   
+  z-index: 1;
+  background: white;
 }
 
 .main-header > div {
@@ -78,6 +83,12 @@ html, body {
   color:black;
   text-decoration: underline red solid 5px;
   transition: all 0.3s ease;    /**changes color slowly and smoothly upon hover**/
+}
+
+main {
+  /* A hack to get navbar to be at top above the item below*/
+  /*93px is the exact height of the navbar*/
+  margin-top: 93px;
 }
 
 #banner {
